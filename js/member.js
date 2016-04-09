@@ -1,3 +1,4 @@
+import React from 'react'
 var Member_List = React.createClass({
   render: function() {
     var _this = this;
@@ -16,7 +17,7 @@ var Member_List = React.createClass({
   }
 });
 
-var DiversityApp = React.createClass({
+var MemberApp = React.createClass({
   mixins: [ReactFireMixin],
 
   getInitialState: function() {
@@ -65,11 +66,11 @@ var DiversityApp = React.createClass({
         <form onSubmit={ this.handleSubmit }>
           <input onChange={ this.onChange } value={ this.state.name } />
           <button>{ 'Add #' + (this.state.members.length + 1) }</button>
-          
+
         </form>
       </div>
     );
   }
 });
 
-ReactDOM.render(<DiversityApp />, document.getElementById('members'));
+ReactDOM.render(<MemberApp />, document.getElementById('members'));
